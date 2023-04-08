@@ -1,0 +1,57 @@
+What is React
+    Open source library for building user interfaces
+    Not a framework
+    Focus on UI
+    Rich ecosystem
+Why learn React ?
+    Created and maintained by Facebook
+    More than 100k stars on Github
+    Huge community
+    in high demand
+Component based architecture
+Reusabe code
+React is declarative
+    Tell React what you want and React will build the actual UI
+React will handle efficiently updating and rendering of the Component
+DOM updates are handled gracefully in React
+
+Component types
+    Functional Component
+    Class Component
+
+What are Hooks ?
+    Hooks are a new feature addition in React version 16.8 which allow you to use React features without having to write a class
+Why Hooks ?
+    Reason-1
+        Understand how 'this' keyword works in JS
+        Remember to bind event handlers in class components
+        Classes don't minify very well and make hot  reloading very unreliable
+    Reason-2
+        There is no particular way to reuse stateful component logic
+        HOC and render props patterns do address this problem
+        Makes the code harder to follow
+        There is need to share stateful logic in a better way
+    Reason-3
+        Create components for complex scenarios such as data fetching and subscribing to events
+        Related code is not organized in one place
+            eg: Data fetching - in componentDidMount and componentDidUpdate
+            eg: Event listeners - in componentDidMount and componentWillUnmount
+        Because of stateful logic - Cannot break components into smaller ones
+
+Hooks
+    useState
+        eg. const [count, setCount] = useState(0)
+        setState in Class compoent merges the state whereas setter function in functional component doesn't merge the state when using objects. Use spread operator to solve this in functional component setter
+        The useState hook lets you add state to functional components
+        In classes, the state is always an objects
+        With the useState hook, the state doesn't have to be an object
+        The useState hook returns an array with 2 elements
+        The first element is the current value of the state, and the second element is a state setter function
+        New state value depend on the previous state value? You can pass a function to the setter function
+        When dealing with objects or arrays, always make sure to spread your state variable and then call the setter function
+
+    useEffect
+        The Effect hook lets you perform side effects in funcional components
+        It is a close replacement for componentDidMount, componentDidUpdate and componentWillUnmount
+
+
