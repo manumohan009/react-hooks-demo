@@ -54,4 +54,6 @@ Hooks
         The Effect hook lets you perform side effects in funcional components
         It is a close replacement for componentDidMount, componentDidUpdate and componentWillUnmount
 
-
+    useContext
+        Context provides a way to pass data through the component tree without having to pass prop down manually at every level.
+        

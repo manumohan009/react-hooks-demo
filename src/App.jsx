@@ -1,15 +1,11 @@
-import { useState } from 'react'
+import { createContext } from 'react'
 
 import './App.css'
-import HookCounterOne from './components/useState/HookCounterOne'
-import HookCounterTwo from './components/useState/HookCounterTwo'
-import HookCounterThree from './components/useState/HookCounterThree'
-import HookCounterFour from './components/useState/HookCounterFour'
-import HookCounterFive from './components/useEffect/HookCounterFive'
-import HookMouse from './components/useEffect/HookMouse'
-import MouseContainer from './components/useEffect/MouseContainer'
-import IntervalHookCounter from './components/useEffect/IntervalHookCounter'
-import DataFetching from './components/useEffect/DataFetching'
+import ComponentC from './components/useContext/ComponentC'
+
+
+export const UserContext = createContext()
+export const ChannelContext = createContext()
 
 function App() {
 
@@ -23,11 +19,19 @@ function App() {
       <HookCounterFour /> */}
       {/* --------------------  setState ------------------- */}
       {/* --------------------  useEffect ------------------- */}
-      <HookCounterFive />
-      <MouseContainer/>
-      <IntervalHookCounter/>
-      <DataFetching/>
+      {/* <HookCounterFive />
+      <MouseContainer />
+      <IntervalHookCounter />
+      <DataFetching /> */}
       {/* --------------------  useEffect ------------------- */}
+      {/* --------------------  useContext ------------------- */}
+      <UserContext.Provider value={'Vishwas'}>
+        <ChannelContext.Provider value={'Codevolution'}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
+      {/* --------------------  useContext ------------------- */}
+
     </div>
   )
 }
